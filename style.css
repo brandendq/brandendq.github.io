@@ -1,0 +1,235 @@
+/* ============================
+   DESIGN SYSTEM (Tokens)
+   ============================ */
+:root {
+  --clr-bg: #0a0f1c;
+  --clr-surface: #141b2d;
+  --clr-primary: #00eaff;   /* neon cyan */
+  --clr-secondary: #ff2d95; /* neon magenta */
+  --clr-text: #e0e6ed;
+  --clr-text-dim: #8a9ab5;
+
+  --radius: 0.75rem;
+  --max-width: 68rem;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --line-glow: 0 0 6px var(--clr-primary), 0 0 12px var(--clr-primary);
+}
+
+/* ============================
+   RESET & BASE
+   ============================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================
+   HEADER & NAVIGATION
+   ============================ */
+header {
+  background: var(--clr-surface);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(0, 234, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.3rem;
+  color: var(--clr-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.25rem;
+}
+
+nav a {
+  color: var(--clr-text);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color var(--transition);
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--clr-secondary);
+  transition: width var(--transition);
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--clr-primary);
+  outline: none;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+/* ============================
+   SECTIONS
+   ============================ */
+section {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 4rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  color: var(--clr-primary);
+  border-left: 4px solid var(--clr-secondary);
+  padding-left: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* ============================
+   PROJECTS
+   ============================ */
+.project {
+  background: var(--clr-surface);
+  border: 1px solid rgba(0, 234, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  transition: transform var(--transition), border-color var(--transition);
+  will-change: transform;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  border-color: var(--clr-secondary);
+  box-shadow: var(--line-glow);
+}
+
+.project h3 {
+  color: var(--clr-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: var(--clr-primary);
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid var(--clr-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+}
+
+.project a:hover {
+  background: var(--clr-primary);
+  color: #000;
+  box-shadow: var(--line-glow);
+}
+
+/* ============================
+   SKILLS
+   ============================ */
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+#skills li {
+  background: var(--clr-surface);
+  padding: 1rem;
+  text-align: center;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform var(--transition), border-color var(--transition), color var(--transition);
+  will-change: transform;
+}
+
+#skills li:hover {
+  transform: translateY(-4px);
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+}
+
+/* ============================
+   CONTACT
+   ============================ */
+#contact a {
+  color: var(--clr-secondary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color var(--transition);
+}
+
+#contact a:hover,
+#contact a:focus {
+  color: var(--clr-primary);
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+  background: var(--clr-surface);
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 234, 255, 0.2);
+  font-size: 0.9rem;
+  color: var(--clr-text-dim);
+}
+
+/* ============================
+   ANIMATIONS
+   ============================ */
+@media (prefers-reduced-motion: no-preference) {
+  section, .project, #skills li {
+    animation: fadeInUp 0.7s ease both;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
