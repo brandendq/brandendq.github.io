@@ -133,6 +133,7 @@ h1{ margin:0 0 .5rem; font-size: clamp(2.2rem, 5vw, 3.4rem); }
 /* Mini nav */
 .mini-nav{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top: 1rem; }
 .mini-nav a{
+  color:#ffffff;/*Change color of the font*/
   padding:.45rem .9rem; border:1px solid var(--border);
   border-radius: 999px; text-decoration:none;
   background: rgba(255,255,255,.03);
