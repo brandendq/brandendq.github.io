@@ -1,55 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Branden de Quesada Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Engineering Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Portfolio of engineering projects and fabrication work." />
 </head>
 <body>
-    <header>
-        <h1>Branden de Quesada</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Short bio about yourself...</p>
-    </section>
+  <header class="site-header" id="top">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">⌁</span>
+      <a href="#top" class="brand-name">Your Name — Portfolio</a>
+    </div>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of project 1.</p>
-            <a href="#">View Project</a>
+    <!-- Pure CSS nav (no JS needed) -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+    <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#senior-design">Senior Design Project</a></li>
+        <li><a href="#mini-fab">Mini Fabrication Projects</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Landing / Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <h1 id="hero-title">Engineering Portfolio</h1>
+        <p class="subtitle">Showcasing Senior Design and Mini Fabrication Projects</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#senior-design">View Senior Design</a>
+          <a class="btn btn-secondary" href="#mini-fab">See Mini Projects</a>
         </div>
-        <!-- Add more projects here -->
+      </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
+    <!-- Senior Design Project -->
+    <section id="senior-design" class="section" aria-labelledby="senior-title">
+      <div class="section-header">
+        <h2 id="senior-title">Senior Design Project</h2>
+        <p class="section-blurb">A capstone project demonstrating problem discovery, design iterations, validation, and results.</p>
+      </div>
+
+      <article id="problem-statement" class="card">
+        <h3>Problem Statement</h3>
+        <p><em>Describe the problem, who it impacts, constraints, success metrics, and baseline state.</em></p>
+        <ul class="detail-list">
+          <li><strong>Users/Stakeholders:</strong> …</li>
+          <li><strong>Pain Points:</strong> …</li>
+          <li><strong>Constraints:</strong> budget, size, safety, timeline…</li>
+          <li><strong>Success Metrics:</strong> …</li>
         </ul>
+      </article>
+
+      <article id="preliminary-design-review" class="card">
+        <h3>Preliminary Design Review (PDR)</h3>
+        <p><em>Show concept exploration, trade studies, and early proofs of concept.</em></p>
+        <ul class="detail-list">
+          <li><strong>Concepts Considered:</strong> …</li>
+          <li><strong>Key Calculations / Simulations:</strong> …</li>
+          <li><strong>Risks & Mitigations:</strong> …</li>
+        </ul>
+      </article>
+
+      <article id="critical-design-review" class="card">
+        <h3>Critical Design Review (CDR)</h3>
+        <p><em>Present the final design decision, detailed drawings, BOM, and validation plan.</em></p>
+        <ul class="detail-list">
+          <li><strong>Final Architecture:</strong> …</li>
+          <li><strong>BOM & Sourcing:</strong> …</li>
+          <li><strong>Testing Plan:</strong> …</li>
+        </ul>
+      </article>
+
+      <article id="final-presentation" class="card">
+        <h3>Final Presentation</h3>
+        <p><em>Summarize outcomes, performance vs. goals, lessons learned, and future work.</em></p>
+        <ul class="detail-list">
+          <li><strong>Performance Results:</strong> …</li>
+          <li><strong>Demo / Media:</strong> Add links or images</li>
+          <li><strong>Future Improvements:</strong> …</li>
+        </ul>
+      </article>
+
+      <nav class="mini-nav" aria-label="Senior design subsections">
+        <a href="#problem-statement">Problem Statement</a>
+        <a href="#preliminary-design-review">PDR</a>
+        <a href="#critical-design-review">CDR</a>
+        <a href="#final-presentation">Final Presentation</a>
+      </nav>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:youremail@example.com">brandendq@gmail.com</a></p>
+    <!-- Mini Fabrication Projects -->
+    <section id="mini-fab" class="section" aria-labelledby="mini-title">
+      <div class="section-header">
+        <h2 id="mini-title">Mini Fabrication Projects</h2>
+        <p class="section-blurb">Short builds and process-focused exercises across digital fabrication and electronics.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article id="computer-controlled-cutting" class="card">
+          <h3>Computer Controlled Cutting</h3>
+          <p>Laser cutting or vinyl plotting workflows, kerf tests, and assembly fits.</p>
+          <ul class="detail-list">
+            <li><strong>Machine:</strong> …</li>
+            <li><strong>Material:</strong> …</li>
+            <li><strong>Files:</strong> DXF/SVG</li>
+          </ul>
+        </article>
+
+        <article id="embedded-programming" class="card">
+          <h3>Embedded Programming</h3>
+          <p>Microcontroller setup, firmware, I/O, and debugging notes.</p>
+          <ul class="detail-list">
+            <li><strong>MCU/Board:</strong> …</li>
+            <li><strong>Toolchain:</strong> …</li>
+            <li><strong>Repo:</strong> …</li>
+          </ul>
+        </article>
+
+        <article id="3d-scanning" class="card">
+          <h3>3D Scanning</h3>
+          <p>Scanning method, registration, cleanup, and measurement accuracy.</p>
+          <ul class="detail-list">
+            <li><strong>Scanner/App:</strong> …</li>
+            <li><strong>Format:</strong> STL/OBJ</li>
+          </ul>
+        </article>
+
+        <article id="computer-controlled-machining" class="card">
+          <h3>Computer-Controlled Machining</h3>
+          <p>CNC toolpaths, workholding, feeds & speeds, and tolerances.</p>
+          <ul class="detail-list">
+            <li><strong>Machine:</strong> …</li>
+            <li><strong>Material:</strong> …</li>
+            <li><strong>CAM:</strong> …</li>
+          </ul>
+        </article>
+
+        <article id="electronics-production" class="card">
+          <h3>Electronics Production</h3>
+          <p>PCB milling/etching, soldering, bring-up, and test procedures.</p>
+          <ul class="detail-list">
+            <li><strong>Process:</strong> …</li>
+            <li><strong>Parts:</strong> …</li>
+            <li><strong>Schematics:</strong> …</li>
+          </ul>
+        </article>
+
+        <article id="molding-and-casting" class="card">
+          <h3>Molding and Casting</h3>
+          <p>Mold design, material selection, safety, and finish quality.</p>
+          <ul class="detail-list">
+            <li><strong>Mold:</strong> 1-part / 2-part</li>
+            <li><strong>Material:</strong> …</li>
+            <li><strong>Cure Time:</strong> …</li>
+          </ul>
+        </article>
+
+        <article id="wildcard" class="card">
+          <h3>Wildcard</h3>
+          <p>Pick a technique to explore—composites, textiles, kinetics, or something new.</p>
+          <ul class="detail-list">
+            <li><strong>Technique:</strong> …</li>
+            <li><strong>Outcome:</strong> …</li>
+          </ul>
+        </article>
+      </div>
+
+      <nav class="mini-nav" aria-label="Mini fabrication subsections">
+        <a href="#computer-controlled-cutting">Cutting</a>
+        <a href="#embedded-programming">Embedded</a>
+        <a href="#3d-scanning">3D Scanning</a>
+        <a href="#computer-controlled-machining">CNC</a>
+        <a href="#electronics-production">Electronics</a>
+        <a href="#molding-and-casting">Molding & Casting</a>
+        <a href="#wildcard">Wildcard</a>
+      </nav>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Branden de Quesada</p>
-    </footer>
+    <!-- About Me -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="section-header">
+        <h2 id="about-title">About Me</h2>
+        <p class="section-blurb"><em>Write a short bio: interests, tools you love, and what problems you like to solve.</em></p>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p>Hi! I’m <strong>Your Name</strong>, a student engineer focused on building practical solutions through iterative design.</p>
+          <ul class="detail-list">
+            <li><strong>Focus Areas:</strong> …</li>
+            <li><strong>Tools:</strong> CAD, CAM, MCU dev, test & measurement</li>
+            <li><strong>Resume:</strong> <a href="#" aria-label="Resume link">Add PDF link</a></li>
+          </ul>
+        </div>
+        <figure class="about-photo">
+          <img src="https://via.placeholder.com/640x420.png?text=Your+Photo" alt="Portrait of Your Name" />
+          <figcaption>Your Name</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Contact Me -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="section-header">
+        <h2 id="contact-title">Contact Me</h2>
+        <p class="section-blurb">Prefer email? This form uses a <code>mailto:</code> link so it works without JavaScript.</p>
+      </div>
+
+      <form class="contact-card" action="mailto:you@example.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input id="name" name="Name" type="text" placeholder="Your name" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="Email" type="email" placeholder="you@example.com" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="Message" rows="6" placeholder="How can I help?" required></textarea>
+
+        <button class="btn" type="submit">Send</button>
+        <p class="contact-alt">Or email me directly at
+          <a href="mailto:you@example.com">you@example.com</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+    <a href="#top" class="back-to-top">Back to top ↑</a>
+  </footer>
+
+  <!-- Optional: no JS policy, but we can progressive-enhance the year with noscript fallback -->
+  <noscript><style>#year::after{content:"2025"}</style></noscript>
+  <script>
+    // This tiny snippet only sets the year text. Remove if you want 0 JS.
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
