@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Computer Controlled Cutting</title>
+  <meta name="description" content="Small offshoot projects from my main portfolio." />
+  <style>
+    :root{
+      --bg:#0c1116; --panel:#0f1620; --text:#eaf2fb; --muted:#a6b6c8;
+      --brand:#18b6a0; --radius:14px; --border:1px solid rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:980px;margin:0 auto;padding:20px}
+    header{margin:8px 0 18px}
+    h1{font-size:clamp(1.4rem,2.5vw,2rem);margin:0 0 6px}
+    p.lead{margin:0;color:var(--muted)}
+    .grid{
+      display:grid;gap:14px;
+      grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+      margin-top:18px;
+    }
+    .card{
+      border:var(--border);border-radius:var(--radius);background:var(--panel);overflow:hidden
+    }
+    .thumb{
+      display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#0b1015
+    }
+    .body{padding:10px 12px}
+    .title{font-weight:700;margin:0 0 6px;font-size:1.02rem}
+    .desc{margin:0;color:var(--muted)}
+    a.more{
+      display:inline-block;margin-top:10px;font-size:.94rem;color:var(--brand);text-decoration:none
+    }
+    a.more:hover{text-decoration:underline}
+    footer{color:var(--muted);text-align:center;margin:22px 0 6px;font-size:.95rem}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Computer Controlled Cutting</h1>
+      <p class="lead">Fast offshoots from my main portfolio—each with a single image and a one-sentence summary.</p>
+    </header>
+
+    <!-- Replace each .card with your real content. Keep sentences concise (≤ 20 words). -->
+    <section class="grid" aria-label="Mini project list">
+      <article class="card">
+        <img class="thumb" src="img/Computer Controlled Cutting/IMG_0185 (1).jpg" alt="Screenshot of responsive microsite navigation" />
+        <div class="body">
+          <h2 class="title">First Affinity Design Attempt</h2>
+          <p class="desc">I used Affinity Designer app to create simple logo to become familiar with the software.</p>
+
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="thumb" src="img/Computer Controlled Cutting/IMG_0186.jpg" alt="Small PCB with LEDs glowing on a workbench" />
+        <div class="body">
+          <h2 class="title">Second Affinity Design Attempt</h2>
+          <p class="desc">I made a second logo to attempt more complicated shapes on Affinity.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="thumb" src="img/Computer Controlled Cutting/IMG_0093.PNG" alt="CSV chart preview on a laptop screen" />
+        <div class="body">
+          <h2 class="title">Company Logo Design 1</h2>
+          <p class="desc">Developed font and wordmark for our company's brand.</p>
+          
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="thumb" src="img/Computer Controlled Cutting/IMG_0094.PNG" alt="Flat dieline of a toolbox-shaped package" />
+        <div class="body">
+          <h2 class="title">Company Logo Design 2</h2>
+          <p class="desc">Designed propellers for the drone that is the focal point of the logo.</p>
+          
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="thumb" src="img/Computer Controlled Cutting/Complete.PNG" alt="Flat dieline of a toolbox-shaped package" />
+        <div class="body">
+          <h2 class="title">Company Logo Design 3</h2>
+          <p class="desc">Designed and finished the body of the drone.</p>
+          
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="thumb" src="img/Computer Controlled Cutting/Cutting_Weeding.PNG" alt="Flat dieline of a toolbox-shaped package" />
+        <div class="body">
+          <h2 class="title">Cutting and Weeding</h2>
+          <p class="desc">Printed vinyl stucker and cut out the individual pieces to make the final sticker.</p>
+          
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="thumb" src="img/Computer Controlled Cutting/final applied sticker.PNG" alt="Flat dieline of a toolbox-shaped package" />
+        <div class="body">
+          <h2 class="title">Final Sticker</h2>
+          <p class="desc">Assembly of the final sticker.</p>
+          
+        </div>
+      </article>
+
+      <!-- Duplicate more cards as needed -->
+    </section>
+
+    <footer>Link back to your main site: <a class="more" href="https://brandendq.github.io">Main Portfolio</a></footer>
+  </div>
+</body>
+</html>

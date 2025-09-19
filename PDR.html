@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preliminary Design Review • HoverHaul Inc.</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">
+        <!-- Simple CSS-only "drone + hook" emblem -->
+        <span class="rotor"></span><span class="rotor"></span>
+        <span class="hook"></span>
+      </div>
+      <div class="brand-text">
+        <h1>HoverHaul Inc.</h1>
+        <p class="subtitle">Preliminary Design Review</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Section navigation">
+      <nav class="toc">
+        <h2 class="toc-title">On this page</h2>
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#problem-statement">Problem Statement</a></li>
+          <li><a href="#problem-synthesis">Problem Synthesis</a></li>
+        </ol>
+      </nav>
+      <div class="badge-stack">
+        <span class="badge">HTML/CSS Only</span>
+        <span class="badge">Responsive</span>
+        <span class="badge">Accessible</span>
+      </div>
+    </aside>
+
+    <main id="main" class="content">
+      <!-- Overview / Hero -->
+      <section id="overview" class="panel hero">
+        <div class="hero-text">
+          <h2>Overview</h2>
+          <p>
+            This Preliminary Design Review (PDR) page documents the core
+            problem and synthesized research context for HoverHaul—an on-site
+            delivery concept to move small, critical supplies across dynamic
+            construction environments.
+          </p>
+        </div>
+        <div class="hero-accent" aria-hidden="true"></div>
+      </section>
+
+      <!-- Problem Statement -->
+      <section id="problem-statement" class="panel">
+        <header class="section-head">
+          <h2>Problem Statement</h2>
+          <div class="section-accent" aria-hidden="true"></div>
+        </header>
+
+        <blockquote class="callout">
+          <p>
+            Construction workers lose time and face safety risks because
+            critical small-scale supplies like water and tools are not delivered
+            directly to them, causing dehydration, downtime, and costly project delays.
+          </p>
+        </blockquote>
+      </section>
+
+      <!-- Problem Synthesis -->
+      <section id="problem-synthesis" class="panel">
+        <header class="section-head">
+          <h2>Problem Synthesis</h2>
+          <div class="section-accent" aria-hidden="true"></div>
+        </header>
+
+        <article class="prose">
+          <p>
+            Construction job sites face multiple overlapping problems that affect safety,
+            efficiency, and overall productivity. One of the most pressing concerns is worker
+            health, particularly hydration. Surveys show that many construction workers experience
+            dehydration during shifts, which can lead to headaches, dizziness, and even serious
+            health risks. Without regular water access, concentration drops and mistakes increase,
+            creating safety hazards. The Hoover Dam construction project is a historical example
+            that demonstrates the consequences of inadequate hydration, as extreme heat and poor
+            water access endangered thousands of workers and slowed progress.
+          </p>
+          <p>
+            Inefficiency is another widespread problem. Studies reveal that the average
+            construction worker spends about 38 hours each year simply searching for misplaced
+            tools. Beyond this, companies lose valuable time and money when equipment is stolen or
+            goes missing. Research shows that poor organization, unclear schedules, and wasted
+            labor hours add up to significant project delays and higher costs. This lack of
+            structure is compounded by the enormous amount of waste produced in construction. The
+            EPA reports that construction and demolition debris make up a large portion of total
+            U.S. waste, raising environmental and logistical issues. Effective site layout planning
+            is critical, but many projects fail to prioritize it, resulting in job site chaos and
+            inefficiencies.
+          </p>
+          <p>
+            Safety is the most critical challenge. The construction industry consistently records
+            some of the highest workplace fatality rates. Falls, slips, and trips remain the
+            leading cause of deaths and injuries, with OSHA, BLS, and legal studies all pointing to
+            inadequate prevention strategies as a core issue.
+          </p>
+          <p>
+            Together, dehydration, wasted time, lost tools, poor layout planning, excessive waste,
+            and high accident rates underscore the urgent need for innovative solutions.
+          </p>
+        </article>
+      </section>
+
+      <footer class="site-footer">
+        <p>
+          © <span id="year"></span> HoverHaul Inc. • Preliminary Design Review
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- No JS needed; this noscript just fills the year if JS is blocked -->
+  <noscript>
+    <style>.site-footer #year::after{content:"2025";}</style>
+  </noscript>
+  <script>
+    // Progressive enhancement: sets the current year in the footer
+    (function(){try{document.getElementById('year').textContent=new Date().getFullYear();}catch(e){}})();
+  </script>
+</body>
+</html>

@@ -16,6 +16,6 @@ Write 1 paragraph synthesizing the the problem
 
 - The construction of the Hoover Dam demonstrates how inadequate access to drinking water on job sites can lead to dangerous working conditions, as extreme heat and lack of hydration threatened worker safety, slowed productivity, and ultimately underscored the critical need for consistent water supply to protect health and maintain efficiency in large-scale construction projects.
 
-[Link title 4](https://www.abax.com/en-gb/blog/did-you-know-construction-workers-spend-38-hours-annually-looking-for-their-tools)
+[Misplaced Tools on Construction Sites](https://www.abax.com/en-gb/blog/did-you-know-construction-workers-spend-38-hours-annually-looking-for-their-tools)
 
 - Construction workers lose significant time each year searching for misplaced tools, reducing efficiency and increasing project costs.
